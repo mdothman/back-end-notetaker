@@ -1,15 +1,28 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app used to write down and save notes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Muhi-Dean Othman",
+  "license": "UNLICENSED",
   "dependencies": {
     "express": "^4.16.4",
     "mysql": "^2.16.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "mdothman"
+  },
+  "keywords": [
+    "Note",
+    "notetaker",
+    "node.js",
+    "back-end",
+    "homework"
+  ]
 }
