@@ -1,14 +1,23 @@
-var express = require("express");
-var app = express();
-var fs = require("fs")
-var PORT = process.env.PORT || 8080;
+const express = require("express");
+const path = require("path");
+const bodyParser = require("body-parser");
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"))
 
-require("./routes/html_routes")(app);
-require("./routes/api_routes")(app);
+const app = express();
+
+
+
+
+const PORT = process.env.PORT || 8080;
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+let html = require("./routes/html_routes");
+let api = require("./routes/api_routes");
+app.use("/html_routes", html);
+app.use("/api_routes", api)
 
 
 
